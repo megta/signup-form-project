@@ -52,36 +52,45 @@
          url('fonts/poppins-v20-latin-700.svg#Poppins') format('svg'); /* Legacy iOS */
   }
 
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
+/* CSS reset */
 
-  * {
-    margin: 0;
-  }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
-  html, body {
-    height: 100%;
-  }
+* {
+  margin: 0;
+}
 
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
+html, body {
+  height: 100%;
+}
 
-  body {
-    font-family: 'Poppins', Verdana;
-  }
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Poppins', Verdana;
+}
+
+/* colors */
+:root {
+--text-highlight-color: hsl(0, 100%, 74%);
+--placeholder-color: ;
+--white-text-color: ;
+}
 
 
-
+/* styles */
 
 
 
 .attribution { 
-    font-size: 11px; text-align: center; 
+  font-size: 11px; text-align: center; 
 }
 
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+  color: hsl(228, 45%, 44%); 
 }
