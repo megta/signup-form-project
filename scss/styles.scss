@@ -70,6 +70,11 @@ body {
     border: 1px solid hsla(249, 10%, 26%, 0.3);
     border-radius: 5px;
   }
+
+  .form__error {
+    font-size: 0.75rem;
+    color: var(--salmon-color);
+  }
   
   .form__submit-btn {
     font-weight: 500;
@@ -116,7 +121,22 @@ body {
     background-color: hsl(154, 59%, 70%);
   }
   
-  
+  .form__input:invalid {
+    border-color: var(--salmon-color);
+  }
+
+  /*
+  .form__input:invalid::after {
+    content: '!';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  or
+  create a span class and hide it initially?
+*/
+
   /* media queries */
   
 /* looks weird after 1440px */
