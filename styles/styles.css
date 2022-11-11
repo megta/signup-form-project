@@ -177,10 +177,6 @@ form {
   background-color: hsl(154deg, 59%, 70%);
 }
 
-.form__input:invalid {
-  border-color: var(--salmon-color);
-}
-
 /*
   .form__input:invalid::after {
     content: '!';
