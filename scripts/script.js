@@ -12,6 +12,7 @@ const fNameError = document.querySelector('.form__error--fname');
 const lNameError = document.querySelector('.form__error--lname');
 const emailError = document.querySelector('.form__error--email');
 const passwordError = document.querySelector('.form__error--password');
+const iconError = document.querySelectorAll('.form__err-icon');
 
 
 function showError() {
@@ -46,7 +47,13 @@ form.addEventListener('submit', (event) => {
         showError();
         for(const answer of input) {
         answer.style.borderColor = 'hsl(0, 100%, 74%)';
+        answer.placeholder = '';
         }
+
+        for (const icon of iconError) {
+            icon.style.visibility = 'visible';
+        }
+        
         event.preventDefault();
     }
 });
