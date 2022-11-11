@@ -13,11 +13,14 @@
 </head>
 
 <body>
+    <div class="pitch">
     <h1>Learn to code by watching others</h1>
 
     <p class="description">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
     but understanding how developers think is invaluable.</p>
+    </div>
 
+    <div class="signup">
     <div class="price-box">
         <p class="price-box__text"><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
     </div>
@@ -26,19 +29,23 @@
         <ul class="form__container">
             <li class="form__input-box">
                 <input type="text" id="first-name" class="form__input" name="first-name" placeholder="First Name" aria-label="first-name" required />
-                <span class="form__error form__error--fname" aria-live="polite"></span>
+                <span class="form__err-icon"></span>
+                <p class="form__error form__error--fname" aria-live="polite"></p>
             </li>
             <li class="form__input-box">
                 <input type="text" id="last-name" class="form__input" name="last-name" placeholder="Last Name" aria-label="last-name" required />
-                <span class="form__error form__error--lname" aria-live="polite"></span>
+                <span class="form__err-icon"></span>
+                <p class="form__error form__error--lname" aria-live="polite"></span></p>
             </li>
             <li class="form__input-box">
                 <input type="email" id="email" class="form__input" name="email" placeholder="Email Address" aria-label="email" required />
-                <span class="form__error form__error--email" aria-live="polite"></span>
+                <span class="form__err-icon"></span>
+                <p class="form__error form__error--email" aria-live="polite"></p>
             </li>
             <li class="form__input-box">
                 <input type="password" id="password" class="form__input" name="password" placeholder="Password" aria-label="password" required />
-                <span class="form__error form__error--password" aria-live="polite"></span>
+                <span class="form__err-icon"></span>
+                <p class="form__error form__error--password" aria-live="polite"></p>
             </li>
         </ul>
 
@@ -46,12 +53,14 @@
 
     <p class="form__terms">By clicking the button, you are agreeing to our <a href="#" class="form__terms--link">Terms and Services</a></p>
     </form>
-
+    
     <footer>
         <p class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
         Coded by <a href="#">Megan</a>.
         </p>
     </footer>
+    </div>
+
 </body>
 </html>
