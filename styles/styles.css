@@ -68,17 +68,37 @@ body {
   padding: 3.125rem 1.25rem;
 }
 
+.pitch {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup {
+  margin-top: 4.375rem;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 h1 {
   font-size: 1.625rem;
   font-weight: 600;
   color: var(--white-text-color);
   text-align: center;
-  margin-top: 1.25em;
+  width: 100%;
 }
 
 .description {
   color: var(--white-text-color);
   text-align: center;
+  width: 100%;
   margin-top: 1.25em;
 }
 
@@ -88,7 +108,8 @@ h1 {
   box-shadow: 0px 8px hsla(248deg, 32%, 49%, 0.3);
   text-align: center;
   padding: 1.25em 5em;
-  margin-top: 4.375rem;
+  width: 100%;
+  max-width: 100%;
 }
 
 .price-box__text {
@@ -102,10 +123,8 @@ form {
   box-shadow: 0px 8px hsla(0deg, 40%, 54%, 0.8);
   padding: 0rem 1.25rem 1.25rem 1.25rem;
   margin-top: 1.875rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  max-width: 100%;
+  height: auto;
 }
 
 .form__container {
@@ -118,6 +137,7 @@ form {
 .form__input-box {
   font-weight: 600;
   margin-top: 1.25rem;
+  position: relative; /* for the icon */
 }
 
 .form__input {
@@ -126,11 +146,6 @@ form {
   padding: 0.938rem;
   border: 1px solid hsla(249deg, 10%, 26%, 0.3);
   border-radius: 5px;
-}
-
-.form__error {
-  font-size: 0.75rem;
-  color: var(--salmon-color);
 }
 
 .form__submit-btn {
@@ -145,6 +160,7 @@ form {
   padding: 0.938em 0em;
   width: 100%;
   max-width: 100%;
+  max-height: 100%;
 }
 
 .form__terms {
@@ -171,58 +187,55 @@ form {
   color: hsl(228deg, 45%, 44%);
 }
 
+/* error styles */
+.form__error {
+  font-size: 0.75rem;
+  color: var(--salmon-color);
+  max-width: 100%;
+  text-align: right;
+  padding-top: 10px;
+  position: relative;
+}
+
+.form__err-icon {
+  content: url("../images/icon-error.svg");
+  position: absolute;
+  right: 1.25rem;
+  top: 0.938rem;
+  visibility: hidden;
+}
+
 /* states */
 .form__submit-btn:hover {
   cursor: pointer;
   background-color: hsl(154deg, 59%, 70%);
 }
 
-/*
-  .form__input:invalid::after {
-    content: '!';
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-  }
-
-  or
-  create a span class and hide it initially?
-*/
 /* media queries */
-/* looks weird after 1440px */
-@media (min-width: 62.5em) {
+@media (min-width: 68.75em) {
   body {
     background-image: url(../images/bg-intro-desktop.png);
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .pitch {
+    max-width: 50%;
+    padding: 1.875rem;
   }
   h1 {
-    font-size: 2.813rem;
+    font-size: 2.25rem;
     font-weight: 700;
-    text-align: left;
-    margin-top: 0;
-    grid-row: 6/7;
-    grid-column: 2/7;
   }
-  .description {
+  h1, .description {
     text-align: left;
-    margin-top: 0;
-    grid-row: 7/8;
-    grid-column: 2/7;
+    max-width: 80%;
   }
-  .price-box {
-    margin-top: 0;
-    grid-row: 2/4;
-    grid-column: 8/12;
+  .signup {
+    max-width: 50%;
+    padding: 1.875rem;
   }
   form {
-    grid-row: 4/11;
-    grid-column: 8/12;
-  }
-  footer {
-    grid-row: 11/12;
-    grid-column: 8/12;
+    padding: 1.25rem 2.5rem 2.5rem 2.5rem;
   }
 }/*# sourceMappingURL=styles.css.map */
