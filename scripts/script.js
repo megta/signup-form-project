@@ -1,7 +1,7 @@
 'use strict';
 
 const form = document.querySelector('form');
-const input = document.querySelector('.form__input');
+const input = document.querySelectorAll('.form__input');
 const firstName = document.querySelector('#first-name');
 const lastName = document.querySelector('#last-name');
 const email = document.querySelector('#email');
@@ -14,22 +14,12 @@ const emailError = document.querySelector('.form__error--email');
 const passwordError = document.querySelector('.form__error--password');
 
 
-
-form.addEventListener('submit', (event) => {
-    if (!form.validity.valid) {
-        showError();
-        input.style.borderColor = 'hsl(0, 100%, 74%)';
-        event.preventDefault();
-    }
-});
-
-
 function showError() {
     if (firstName.validity.valueMissing) {
         fNameError.textContent = 'First Name cannot be empty';
     } 
-
-    /* 
+    
+    /*
     if (firstName.value === '') {
         fNameError.textContent = 'First Name cannot be empty';
     }
@@ -48,9 +38,20 @@ function showError() {
     if (password.validity.valueMissing) {
         passwordError.textContent = 'Password cannot be empty';
     }
-
-
 }
+
+
+form.addEventListener('submit', (event) => {
+    if (!form.checkValidity()) {
+        showError();
+        for(const answer of input) {
+        answer.style.borderColor = 'hsl(0, 100%, 74%)';
+        }
+        event.preventDefault();
+    }
+});
+
+
 
 
 
