@@ -59,7 +59,6 @@ body {
   
   .form__input-box {
     font-weight: 600;
-    
     margin-top: 1.25rem;
   }
 
@@ -121,9 +120,6 @@ body {
     background-color: hsl(154, 59%, 70%);
   }
   
-  .form__input:invalid {
-    border-color: var(--salmon-color);
-  }
 
   /*
   .form__input:invalid::after {
