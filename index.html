@@ -22,19 +22,23 @@
         <p class="price-box__text"><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
     </div>
 
-    <form action="" method="">
+    <form action="" method="" novalidate>
         <ul class="form__container">
             <li class="form__input-box">
                 <input type="text" id="first-name" class="form__input" name="first-name" placeholder="First Name" aria-label="first-name" required />
+                <span class="form__error form__error--fname" aria-live="polite"></span>
             </li>
             <li class="form__input-box">
                 <input type="text" id="last-name" class="form__input" name="last-name" placeholder="Last Name" aria-label="last-name" required />
+                <span class="form__error form__error--lname" aria-live="polite"></span>
             </li>
             <li class="form__input-box">
                 <input type="email" id="email" class="form__input" name="email" placeholder="Email Address" aria-label="email" required />
+                <span class="form__error form__error--email" aria-live="polite"></span>
             </li>
             <li class="form__input-box">
                 <input type="password" id="password" class="form__input" name="password" placeholder="Password" aria-label="password" required />
+                <span class="form__error form__error--password" aria-live="polite"></span>
             </li>
         </ul>
 
