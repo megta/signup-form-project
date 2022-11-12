@@ -65,7 +65,14 @@ body {
   background-color: var(--salmon-color);
   background-image: url("../images/bg-intro-mobile.png");
   line-height: 1.5;
+}
+
+main {
+  width: 100%;
   padding: 3.125rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .pitch {
@@ -175,6 +182,7 @@ form {
   text-decoration: none;
   font-weight: 700;
   color: var(--salmon-color);
+  cursor: pointer;
 }
 
 .attribution {
@@ -212,19 +220,22 @@ form {
 }
 
 /* media queries */
-@media (min-width: 68.75em) {
+@media (min-width: 62.5em) {
   body {
     background-image: url(../images/bg-intro-desktop.png);
-    display: flex;
+  }
+  main {
     flex-direction: row;
     justify-content: space-between;
+    padding: 3.125rem;
+    height: 100%;
   }
   .pitch {
     max-width: 50%;
     padding: 1.875rem;
   }
   h1 {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
     font-weight: 700;
   }
   h1, .description {
